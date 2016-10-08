@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @channel.name %>
+</p>
+
+<h4>List of Movies</h4>
+
+<% if @channel.movies.any? %>
+  <ul>
+    <% @channel.movies.each do |channel| %>
+      <li><%= channel.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no channels in this channel.</p>
+<% end %>
+
+<%= link_to 'Edit', edit_channel_path(@channel) %> |
+<%= link_to 'Back', channels_path %>

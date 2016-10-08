@@ -10,15 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161007140000) do
+ActiveRecord::Schema.define(version: 20161008111404) do
+
+  create_table "channels", force: :cascade do |t|
+    t.string   "name"
+    t.string   "string"
+    t.string   "image_string"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "movies", force: :cascade do |t|
     t.string   "name"
     t.string   "genre"
-    t.float    "rating"
+    t.string   "rating"
+    t.string   "description"
     t.string   "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "channel_id"
+    t.index ["channel_id"], name: "index_movies_on_channel_id"
   end
 
 end

@@ -10,5 +10,15 @@
     <%= f.label :image_url %>
     <%= f.text_field :image_url %>
 
+    <%= f.label :rating%>
+    <%= f.number_field :rating %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.label :channel_id %>
+    <%= f.collection_select(:channel_id, Channel.all, :id, :name) %>
+
+
     <%= f.submit "Create" %>
 <% end %>
