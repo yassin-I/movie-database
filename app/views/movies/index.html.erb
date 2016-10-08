@@ -4,3 +4,4 @@
 <% @movies.each do |movie| %>
     <p><%= link_to movie.name, movie_path(movie.id) %></p>
 <% end %>
+<%= link_to "[New Movie]", new_movie_path %>
