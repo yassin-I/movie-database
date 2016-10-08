@@ -1,7 +1,59 @@
-<h1>Movies</h1>
+<!doctype html>
+<html>
+<head>
+  <title>Movie</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+
+  <header class="header" href="./movies">
+    <!-- Here comes the header-->
+    <h1 class="header-title">MovieVault</h1>
+  </header>
+
+  <div class="banner">
+    <!-- Here comes the banner -->
+    <img class="banner-logo" src="http://www.freeiconspng.com/uploads/movie-icon-27.png">
+        <h1 class="banner-title">MovieVault</h1>
+      <h2 class="banner-subtitle">Your favorite Movie Database</h2>
+  </div>
+
+  <main class="Valleys-main">
+
+    <a href="./movies/channel"><article class="valleys-card">
+      <img class="valleys-card-image" src="https://scontent-ord1-1.xx.fbcdn.net/v/t34.0-12/14593191_10157533998925721_293066332_n.jpg?oh=42dc4c497ce2715083539c15f7c67f4e&oe=57FB45CD">
+      <h2 class="valleys-card-title">Channels</h2>
+      <p class="valleys-card-button">
+        Channel list
+      </p>
+      <a  class="valleys-card-button-style" href="./movies/channel"><font color="white">  Channel list </font></a>
+    </article></a>
+
+    <a href="./movies/list"><article class="valleys-card">
+      <img class="valleys-card-image" src="https://scontent-ord1-1.xx.fbcdn.net/v/t34.0-12/14627824_10157533998575721_1735353553_n.jpg?oh=bb0eb44f0ebb726a7a0b4083ee9454d7&oe=57FB5934">
+      <h3 class="valleys-card-title">Movie list</h3>
+      <p class="valleys-card-button">
+        Movie list
+      </p>
+      <a  class="valleys-card-button-style" href="./movies/list"><font color="white">  Movie list </font></a>
+    </article></a>
+
+    <a href="./movies/new"><article class="valleys-card">
+      <img class="valleys-card-image" src="https://scontent-ord1-1.xx.fbcdn.net/v/t34.0-12/14593480_10157533998695721_1747349391_n.jpg?oh=00637534baff7066e46cad20476984f6&oe=57FAF75C">
+      <h4 class="valleys-card-title">Add a movie</h4>
+      <p class="valleys-card-button">
+        Add your own movie to our database!
+      </p>
+      <a  class="valleys-card-button-style" href="./movies/new"><font color="white"> Add movie </font></a>
+    </article>
 
 
-<% @movies.each do |movie| %>
-    <p><%= link_to movie.name, movie_path(movie.id) %></p>
-<% end %>
-<%= link_to "[New Movie]", new_movie_path %>
+  </main>
+
+  <footer class="footer">
+    <p>© MovieVault | <font color="red">Site powered by Localhost</font></p>
+  </footer>
+
+
+</body>
+</html>
